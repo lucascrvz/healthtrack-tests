@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.healthtrack.AppTest" time="0.022" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.healthtrack.UsuarioTest" time="0.011" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/lcruz/Coding/healthtrack-tests/healthtrack-tests/target/test-classes:/home/lcruz/Coding/healthtrack-tests/healthtrack-tests/target/classes:/home/lcruz/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/lcruz/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/home/lcruz/Coding/healthtrack-tests/target/test-classes:/home/lcruz/Coding/healthtrack-tests/target/classes:/home/lcruz/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/lcruz/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Red Hat, Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://www.redhat.com/"/>
@@ -12,9 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/lcruz/Coding/healthtrack-tests/healthtrack-tests/target/surefire/surefirebooter-20250705161053786_3.jar /home/lcruz/Coding/healthtrack-tests/healthtrack-tests/target/surefire 2025-07-05T16-10-53_707-jvmRun1 surefire-20250705161053786_1tmp surefire_0-20250705161053786_2tmp"/>
+    <property name="sun.java.command" value="/home/lcruz/Coding/healthtrack-tests/target/surefire/surefirebooter-20250705163313851_3.jar /home/lcruz/Coding/healthtrack-tests/target/surefire 2025-07-05T16-33-13_776-jvmRun1 surefire-20250705163313851_1tmp surefire_0-20250705163313851_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/lcruz/Coding/healthtrack-tests/healthtrack-tests/target/test-classes:/home/lcruz/Coding/healthtrack-tests/healthtrack-tests/target/classes:/home/lcruz/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/lcruz/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/home/lcruz/Coding/healthtrack-tests/target/test-classes:/home/lcruz/Coding/healthtrack-tests/target/classes:/home/lcruz/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/lcruz/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/lcruz"/>
     <property name="user.language" value="en"/>
@@ -22,12 +22,12 @@
     <property name="java.version.date" value="2025-04-15"/>
     <property name="java.home" value="/usr/lib/jvm/java-21-openjdk"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/lcruz/Coding/healthtrack-tests/healthtrack-tests"/>
+    <property name="basedir" value="/home/lcruz/Coding/healthtrack-tests"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/lcruz/Coding/healthtrack-tests/healthtrack-tests/target/surefire/surefirebooter-20250705161053786_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/lcruz/Coding/healthtrack-tests/target/surefire/surefirebooter-20250705163313851_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6"/>
     <property name="user.name" value="lcruz"/>
@@ -42,7 +42,7 @@
     <property name="java.vendor.url.bug" value="https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&amp;component=java-21-openjdk&amp;version=41"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="java.version" value="21.0.7"/>
-    <property name="user.dir" value="/home/lcruz/Coding/healthtrack-tests/healthtrack-tests"/>
+    <property name="user.dir" value="/home/lcruz/Coding/healthtrack-tests"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -54,5 +54,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testApp" classname="com.healthtrack.AppTest" time="0.002"/>
+  <testcase name="testActualizarPeso_ErrorActual" classname="com.healthtrack.UsuarioTest" time="0.001"/>
+  <testcase name="testActualizarPeso_Correcta" classname="com.healthtrack.UsuarioTest" time="0.0"/>
 </testsuite>
