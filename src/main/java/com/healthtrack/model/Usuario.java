@@ -1,8 +1,10 @@
-package com.healthtrack;
+package com.healthtrack.model;
 
 public class Usuario {
     private String nombre;
     private double peso;
+
+    public Usuario() {}
 
     public Usuario(String nombre, double peso) {
         this.nombre = nombre;
@@ -17,12 +19,16 @@ public class Usuario {
         return peso;
     }
 
-    public void actualizarPeso(double nuevoPeso) {
-        // ERROR: En lugar de asignar el nuevo peso, se está restando 1kg.
-        // this.peso -= 1;
-        // CORRECCIÓN: Asignar el nuevo peso correctamente.
-        this.peso = nuevoPeso;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public void actualizarPeso(double nuevoPeso) {
+        this.peso = nuevoPeso;
     }
 
     public void mostrarInformacion() {

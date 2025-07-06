@@ -1,21 +1,42 @@
-package com.healthtrack;
+import com.healthtrack.model.Usuario;
 
 import static org.junit.Assert.assertEquals;
+import org.junit.Before;
 import org.junit.Test;
 
 public class UsuarioTest {
-    @Test
-    public void testActualizarPeso_ErrorActual() {
-        Usuario u = new Usuario("Lucas", 70.0);
-        u.actualizarPeso(72.0); // Se espera que pese 72, pero el bug lo deja en 69
-        assertEquals(72.0, u.getPeso(), 0.01);
+
+    private Usuario usuario;
+
+    @Before
+    public void setUp() {
+        usuario = new Usuario("Lucas", 70.0);
     }
 
     @Test
-    public void testActualizarPeso_Correcta() {
-        Usuario u = new Usuario("Lucas", 70.0);
-        // Solución temporal para demostrar test correcto
-        u.actualizarPeso(72.0); 
-        assertEquals(72.0, u.getPeso(), 0.01);
+    public void testGetNombre() {
+        assertEquals("Lucas", usuario.getNombre());
+    }
+
+    @Test
+    public void testGetPesoInicial() {
+        assertEquals(70.0, usuario.getPeso(), 0.01);
+    }
+
+    @Test
+    public void testActualizarPeso_DeberiaAsignarNuevoPeso() {
+        usuario.actualizarPeso(72.5);  // Aquí fallará porque hay un bug
+        assertEquals(72.5, usuario.getPeso(), 0.01);
+    }
+
+    @Test
+    public void testActualizarPeso_Negativo() {
+        usuario.actualizarPeso(-10.0);
+        assertEquals(-10.0, usuario.getPeso(), 0.01);
+    }
+
+    @Test
+    public void testMostrarInformacion_NoLanzaExcepcion() {
+        usuario.mostrarInformacion();
     }
 }
