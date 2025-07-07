@@ -35,3 +35,9 @@ public class Usuario {
         System.out.println("Usuario: " + nombre + ", Peso Actual: " + peso + " kg");
     }
 }
+
+
+
+
+	this.peso -= 1;
+
