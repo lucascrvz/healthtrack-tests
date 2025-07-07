@@ -41,7 +41,7 @@ jobs:
       - name: SonarCloud Scan
         run: |
           mvn verify sonar:sonar \
-            -Dsonar.projectKey=healthtrack \
+            -Dsonar.projectKey=lucascrvz_healthtrack \
             -Dsonar.organization=lucascrvz \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
