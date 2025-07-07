@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up JDK 17
@@ -28,7 +28,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build and test
+      - name: Build and run unit tests
         run: mvn clean verify
 
       - name: Upload Surefire reports
@@ -39,7 +39,9 @@ jobs:
           retention-days: 7
 
       - name: SonarCloud Scan
-        run: mvn verify sonar:sonar -Dsonar.projectKey=healthtrack \
-          -Dsonar.organization=tu-org-sonarcloud \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: |
+          mvn verify sonar:sonar \
+            -Dsonar.projectKey=healthtrack \
+            -Dsonar.organization=tu-org-sonarcloud \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
